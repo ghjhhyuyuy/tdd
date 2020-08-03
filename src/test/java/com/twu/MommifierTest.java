@@ -2,6 +2,7 @@ package com.twu;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class MommifierTest {
     @Test
@@ -24,5 +25,13 @@ public class MommifierTest {
         Mommifier mommifier = new Mommifier();
         String exceptString = "gomommyes";
         assertEquals(exceptString,mommifier.momifierString(vowelsMoreThan30WithContinuousVowels));
+    }
+    @Test
+    void should_throw_exception_when_input_null_or_empty(){
+        Mommifier mommifier = new Mommifier();
+        Throwable exceptionInputEmpty = assertThrows(Exception.class,()->mommifier.momifierString(""));
+        Throwable exceptionInputNull = assertThrows(Exception.class,()->mommifier.momifierString(null));
+        assertEquals("input is wrong",exceptionInputEmpty.getMessage());
+        assertEquals("input is wrong",exceptionInputNull.getMessage());
     }
 }
