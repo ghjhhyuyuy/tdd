@@ -8,6 +8,6 @@ package com.twu;
 public class Mommifier {
 
     public String momifierString(String inputString) {
-        return null;
+        return inputString;
     }
 }
