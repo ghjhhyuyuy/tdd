@@ -7,7 +7,7 @@ public class MommifierTest {
     @Test
     void should_do_nothing_when_vowels_less_than_30_percents() {
         String vowelsLessThan30 = "hello";
-        String vowelsLessThan30WithContinuousVowels = "goess";
+        String vowelsLessThan30WithContinuousVowels = "gosss";
         Mommifier mommifier = new Mommifier();
         assertEquals(vowelsLessThan30,mommifier.momifierString(vowelsLessThan30));
         assertEquals(vowelsLessThan30WithContinuousVowels,mommifier.momifierString(vowelsLessThan30WithContinuousVowels));
